@@ -28,8 +28,18 @@ app.post("/summary", function(req,res){
     } else {
         res.render("index")
     }
-    // res.render('summary', {enterCode: actualCode})
+   
 })
+
+// app.get("/submit", function(req,res){
+//     const submition
+
+//     if (submition === true){
+//         res.render("submit", )
+//     }
+
+//     res.render('submit', {enterCode: actualCode})
+// })
 
 var PORT = process.env.PORT || 3008;
 
