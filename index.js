@@ -16,30 +16,32 @@ app.use(bodyparser.urlencoded({extended: false}))
 app.set(bodyparser.json())
 
 app.get('/', function (req,res){
+    
     res.render('index')
 })
 
-app.post("/summary", function(req,res){
+app.post("/deliveryschedule", function(req,res){
+   
     const med =  medApp.diffCode(req.body.code)
     console.log(med);
     
     if (med) {
-        res.render('summary', {})
+        res.render('deliveryschedule', {})
     } else {
-        res.render("index")
+        res.render("summary")
     }
    
 })
 
-// app.get("/submit", function(req,res){
-//     const submition
-
-//     if (submition === true){
-//         res.render("submit", )
+app.get("/inconvinience", function(req,res){
+//     var mesg = medApp.message(req.body.msg)
+//     if (mesg){
+     res.render('inconvinience')
+//     }else{
+//         res.render("summary")
 //     }
+})
 
-//     res.render('submit', {enterCode: actualCode})
-// })
 
 var PORT = process.env.PORT || 3008;
 

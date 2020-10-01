@@ -5,6 +5,7 @@ module.exports = function medsApp(){
 
 
     function diffCode(code){
+
         var list = ["3656","4546","3233","4464"]
 
 
@@ -15,11 +16,16 @@ module.exports = function medsApp(){
             return false
         }
     }
-
-
+     
+    function message(msg){
+        if (msg.value === "not-delivered"){
+            return "sorry for the inconvinience"
+        }
+    }
     return{
-        diffCode
-
+        diffCode,
+        message
+     
 
         }
 }
