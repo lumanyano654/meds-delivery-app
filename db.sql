@@ -1,8 +1,7 @@
-create table prescription (
+create table approvals (
 id serial not null primary key,
-client_name text not null,
-code int not null
-
+delivery_status text not null,
+numbers int not null
 );
 
 create table medication (
@@ -11,10 +10,17 @@ meds text not null
 
 );
 
+create table package (
+id serial not null primary key,
+medicine text not null
 
-insert into prescription(client_name, code) values ('Nokwakha', '4553');
-insert into prescription(client_name, code) values ('Bhulu', '7853');
-insert into prescription(client_name, code) values ('Zoleka', '6453');
-insert into prescription(client_name, code) values ('Biko','3544');
-insert into prescription(client_name, code) values ('Ngubane','8779');
-insert into prescription(client_name, code) values ('Jack', '6738');
+);
+
+
+insert into approvals(delivery_status, numbers) values ('delivered', '210');
+insert into approvals(delivery_status, numbers) values ('undelivered', '90');
+insert into approvals(delivery_status, numbers) values ('missing_content', '120');
+
+
+
+

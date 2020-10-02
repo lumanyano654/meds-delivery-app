@@ -2,23 +2,16 @@
 
 
 <h4>Contents</h4>
+{{prescription.items}}
+
+
 
 <div>
-    <br>
-   <input type="checkbox" name="medicine"> Sulfonylureas 
-    <br>
-   <input type="checkbox" name="medicine">  Meglitinides
-    <br>
-    <input type="checkbox" name="medicine"> Thiazolidinediones
-   <br>
-     <input type="checkbox" name="medicine"> DPP-4 inhibitors
-   <br>
-     <input type="checkbox" name="medicine"> DPP-4 inhibitors
-   <br>
-    <input type="checkbox" name="medicine">  SGLT2 inhibitors
-   <br>
-    <input type="checkbox" name="medicine">  Insulin
-   <br>
+    
+   {{#each items}}
+  <input type="checkbox" name="{{this}}" id="{{this}}">{{this}}
+{{/each}}
+
 </div>
 
 <h3>feedback</h3>
@@ -39,5 +32,11 @@
     <input type="textbox" name="customer report" id="textboxid">
 </div>
 <br>
-<input type="submit">
+
+
+<a href="/thanks">  
+    <button type="" > Done</button>
+
+</a>
+
 
