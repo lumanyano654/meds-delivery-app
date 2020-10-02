@@ -117,7 +117,8 @@ app.get("/summary/:code", async function (req, res) {
 app.get('/thanks', function(req, res){
     
 
-    res.render("thankyou")
+    res.render("thankyou", 
+    )
 })
 
 
